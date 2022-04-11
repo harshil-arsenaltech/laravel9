@@ -29,12 +29,8 @@ class CreateLoginRequest extends FormRequest
         ];
     }
 
-    public static function loginRequest()
-    {
-        return [
-            'email' => 'required|email',
-            'password' => 'required|string|min:8',
-        ];
-    }
-
+    const loginRequest = [
+        'email' => 'required|email',
+        'password' => 'required|string|min:6',
+    ];
 }

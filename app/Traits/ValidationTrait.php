@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Validator;
 
 trait ValidationTrait
 {
-    public function validateRequest($fields, $request)
+    public function validateRequest($request, $fields)
     {
         $validator = Validator::make($request->all(), $fields);
 

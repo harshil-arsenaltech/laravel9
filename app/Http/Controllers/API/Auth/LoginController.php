@@ -12,7 +12,7 @@ class LoginController extends Controller
 {
     public function login(Request $request)
     {
-        $this->validateRequest(CreateLoginRequest::loginRequest, $request);
+        $this->validateRequest($request, CreateLoginRequest::loginRequest);
 
         if (!Auth::attempt($request->only('email', 'password'))) {
             return response()->json([
